@@ -1,0 +1,111 @@
+<mat-card class="color">
+  <mat-card-header>
+    <mat-card-title>Livro</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form charme" >
+      <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="3.5%"
+        fxLayoutAlign="left"
+      >
+        <mat-form-field appearance="fill" class="campos">
+          <mat-label>Titulo</mat-label>
+          <input
+            matInput
+            placeholder="Titulo"
+            name="titulo"
+            [(ngModel)]="livroAluga.titulo"
+          />
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50%" class="campos">
+          <mat-label>ISBN</mat-label>
+          <input
+            matInput
+            placeholder="ISBN"
+            name="isbn"
+            [(ngModel)]="livroAluga.isbn"
+          />
+        </mat-form-field>
+      </div>
+
+      <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="3.5%"
+        fxLayoutAlign="left"
+      >
+        <mat-form-field class="campos">
+          <mat-label>Autor</mat-label>
+          <input
+            matInput
+            placeholder="Autor"
+            name="autor"
+            [(ngModel)]="livroAluga.autor"
+          />
+        </mat-form-field>
+      </div>
+      <hr />
+
+      <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="3.5%"
+        fxLayoutAlign="left"
+      >
+        <mat-form-field class="campos">
+          <mat-label>Genero</mat-label>
+          <input
+            matInput
+            placeholder="Genero"
+            name="genero"
+            [(ngModel)]="livroAluga.genero"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="campos">
+          <mat-label>Numero de Paginas</mat-label>
+          <input
+            matInput
+            placeholder="Numero Paginas"
+            name="nPaginas"
+            [(ngModel)]="livroAluga.nPaginas"
+          />
+        </mat-form-field>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="3.5%"
+        fxLayoutAlign="left"
+      >
+        <mat-form-field class="campos">
+          <mat-label>Ano de Publicação</mat-label>
+          <input
+            matInput
+            placeholder="Ano"
+            name="ano"
+            [(ngModel)]="livroAluga.ano"
+          />
+        </mat-form-field>      
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-footer>
+    <button mat-raised-button class="primary" (click)="salvar()">
+      <mat-icon>check_circle_outline</mat-icon>
+      Salvar
+    </button>
+    
+    <button mat-raised-button color="secondary" (click)="voltar()">
+      <mat-icon>delete_outline</mat-icon>
+      Voltar
+    </button>
+  </mat-card-footer>
+</mat-card>
